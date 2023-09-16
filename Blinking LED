@@ -1,0 +1,22 @@
+CPE 0412-1 Microprocessor
+Bergola - Blinking LED
+https://www.tinkercad.com/things/7OQEQ0ghiVV-terrific-waasa/editel?sharecode=1HH03b8o5Nmk-tPcNpXkfy6SKEWUfqAEOjyEi14OmS4
+
+// C++ code
+// LED BLINKING
+int IN = 7;  //GLOBAL VARIABLE
+void setup()
+{
+  pinMode(IN, OUTPUT);
+  Serial.begin(9600);
+}
+ 
+void loop()
+{
+  digitalWrite(IN, HIGH);
+  delay(500); // Wait for 1000 millisecond(s)
+  Serial.println("ON");
+  digitalWrite(IN, LOW);
+  delay(500); // Wait for 1000 millisecond(s)
+  Serial.println("OFF");
+}
